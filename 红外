@@ -1,0 +1,76 @@
+int sigh1=1;
+int sigh2=3;
+int sigh3=5;
+int sigh4=7;
+int LIGH1=2;
+int LIGH2=4;
+int LIGH3=6;
+int LIGH4=8;
+int val1;
+int val2;
+int val3;
+int val4;
+void setup()
+  {
+pinMode(sigh1,OUTPUT);
+pinMode(LIGH1,INPUT);
+pinMode(sigh2,OUTPUT);
+pinMode(LIGH2,INPUT);
+pinMode(sigh3,OUTPUT);
+pinMode(LIGH3,INPUT);
+pinMode(sigh4,OUTPUT);
+pinMode(LIGH4,INPUT);
+}
+
+void loop() {
+  val1 = digitalRead(LIGH1);
+  val2 = digitalRead(LIGH2);
+  val3 = digitalRead(LIGH3);
+  val4 = digitalRead(LIGH4);
+switch(val1)
+{
+  case 0:
+  val1=1;
+  break;
+  case 1:
+  val1=0;
+  break;
+
+  }
+
+  switch(val2)
+{
+  case 0:
+  val2=1;
+  break;
+  case 1:
+  val2=0;
+  break;
+
+  }
+  switch(val3)
+{
+  case 0:
+  val3=1;
+  break;
+  case 1:
+  val3=0;
+  break;
+
+  }
+  switch(val4)
+{
+  case 0:
+  val4=1;
+  break;
+  case 1:
+  val4=0;
+  break;
+
+  }
+
+digitalWrite(sigh1,val1);
+digitalWrite(sigh2,val2);
+digitalWrite(sigh3,val3);
+digitalWrite(sigh4,val4);
+}
